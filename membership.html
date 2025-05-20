@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/gym-logo.jpg" alt="PowerFit Gym Logo" />
+        <span>PowerFit Gym</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="extras.html">Extras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Membership Form Section -->
+  <section class="form-section">
+    <h2>Join Our Gym</h2>
+    <form id="membershipForm" onsubmit="return validateForm()">
+
+      <!-- Full Name -->
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <!-- Phone -->
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 5551234567" required />
+
+      <!-- Address -->
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required />
+
+      <!-- Date of Birth -->
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <!-- Membership Plan -->
+      <label for="plan">Choose a Plan:</label>
+      <select id="plan" name="plan" required>
+        <option value="">-- Select Plan --</option>
+        <option value="basic">Basic - $20/mo</option>
+        <option value="standard">Standard - $35/mo</option>
+        <option value="premium">Premium - $50/mo</option>
+      </select>
+
+      <!-- Payment Info -->
+      <h3>Payment Information</h3>
+
+      <label for="card">Card Number:</label>
+      <input type="text" id="card" name="card" pattern="\d{16}" maxlength="16" placeholder="1234123412341234" required />
+
+      <label for="expiry">Expiry Date:</label>
+      <input type="month" id="expiry" name="expiry" required />
+
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" pattern="\d{3}" maxlength="3" required />
+
+      <!-- Gender -->
+      <label>Gender:</label>
+      <label><input type="radio" name="gender" value="Male" /> Male</label>
+      <label><input type="radio" name="gender" value="Female" /> Female</label>
+      <label><input type="radio" name="gender" value="Other" /> Other</label>
+
+      <!-- Emergency Contact -->
+      <label for="emergency">Emergency Contact:</label>
+      <input type="tel" id="emergency" name="emergency" pattern="[0-9]{10}" placeholder="e.g. 5559876543" />
+
+      <!-- Terms -->
+      <label>
+        <input type="checkbox" id="terms" name="terms" required />
+        I agree to the terms and conditions
+      </label>
+
+      <!-- Submit -->
+      <input type="submit" value="Submit" />
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PowerFit Gym | Brooklyn, NY</p>
+    <div class="socials">
+      <a href="#"><img src="images/icon-fb.png" alt="Facebook" /></a>
+      <a href="#"><img src="images/icon-ig.png" alt="Instagram" /></a>
+      <a href="#"><img src="images/icon-x.png" alt="Twitter/X" /></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
